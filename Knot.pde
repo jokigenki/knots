@@ -78,7 +78,7 @@ static class Knot {
   }
   
   void clip () {
-    print("\nclip " + this);
+    //print("\nclip " + this);
     for (int i = 0; i < stack.length - 1; i++) {
        for (int j = i + 1; j < stack.length; j++) {
          Band above = stack[i].a;

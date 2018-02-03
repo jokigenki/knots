@@ -37,9 +37,11 @@ static PVector closer (PVector a, PVector b, PVector t) {
 }
 
 static boolean matchVector (PVector a, PVector b) {
+  if (a == null || b == null) return false;
   return (a.dist(b) < 0.001);
 }
 
 static boolean matchVector (PVector a, PVector b, float distance) {
+  if (a == null || b == null) return false;
   return (a.dist(b) < distance);
 }

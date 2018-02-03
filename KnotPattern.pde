@@ -22,8 +22,8 @@ class KnotPattern {
     textSize(18);
     for (Band band : allBands) {
       band.draw();
-      PVector s = band.main.centre.start;
-      PVector e = band.main.centre.end;
+      PVector s = band.centre.start;
+      PVector e = band.centre.end;
       fill(0);
       text("" + band.index, s.x, s.y);
       noFill();
@@ -191,7 +191,7 @@ class KnotPattern {
   // returns a list of knots in order of distance from the start point of the band
   Knot[] sortKnotsForBand (Knot[] knots, Band band) {
     Knot[] sorted = new Knot[0];
-    PVector start = band.main.centre.start;
+    PVector start = band.centre.start;
     for (Knot knot : knots) {
       if (knot.getBandIndex(band) == -1) continue;
       BandIntersection intersection = knot.getIntersectionForBand(band);

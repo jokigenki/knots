@@ -16,7 +16,7 @@ void setup() {
 
   // one!
   Bounds b = new Bounds(new PVector(100, 100), new PVector(1400, 1100));
-  pat = new KnotPattern(8, 15, b, 3);
+  pat = new KnotPattern(8, 20, b, 3);
   print("\nfinished set up\n");
 
   drawPattern(pat);
